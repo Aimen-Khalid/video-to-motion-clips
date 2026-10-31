@@ -1,0 +1,14 @@
+{
+  "name": "motion-clips",
+  "private": true,
+  "description": "Renderer for video-to-motion-clips: npm install here, then node engine.js <n> [--stills t1,t2]",
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.65",
+    "@fontsource/amiri": "*", "@fontsource/archivo-black": "*", "@fontsource/bangers": "*",
+    "@fontsource/bebas-neue": "*", "@fontsource/caveat": "*", "@fontsource/cormorant-garamond": "*",
+    "@fontsource/dm-serif-display": "*", "@fontsource/fraunces": "*", "@fontsource/inter": "*",
+    "@fontsource/libre-baskerville": "*", "@fontsource/noto-nastaliq-urdu": "*", "@fontsource/oswald": "*",
+    "@fontsource/patrick-hand": "*", "@fontsource/playfair-display": "*", "@fontsource/space-mono": "*",
+    "@fontsource/special-elite": "*"
+  }
+}

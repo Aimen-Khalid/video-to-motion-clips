@@ -1,0 +1,862 @@
+<title>11th Hour Ep. 6 Clips</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,500;1,600&family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700;800&family=Special+Elite&family=Bangers&family=Caveat:wght@400;700&family=Patrick+Hand&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Nastaliq+Urdu:wght@400;700&family=Bebas+Neue&family=Archivo+Black&family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;500;700&display=swap">
+<script src="motion/styles.bundle.js"></script>
+<script src="motion/data.js"></script>
+<script src="motion/captions.js"></script>
+<script src="motion/captions-data.js"></script>
+<style>
+.motion{display:flex;justify-content:center}
+.stage-canvas{width:300px;max-width:100%;aspect-ratio:9/16;height:auto;border-radius:12px;background:#000;display:block;cursor:pointer}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line)}
+.tabs button{border:none;background:transparent;color:var(--muted);font:600 .95rem var(--f-body);padding:10px 14px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.setup{display:grid;gap:18px}
+.q{display:grid;gap:10px}
+.q h3{font-size:1.02rem}
+.q .help{margin:0;color:var(--muted);font-size:.88rem;max-width:65ch}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;background:var(--bg);font-size:.92rem}
+.opt input{accent-color:var(--accent)}
+.lang-opts{display:grid;gap:8px;max-width:640px}
+.lang-group{margin:6px 0 0;font:500 .7rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.lang-opt{display:flex;align-items:flex-start;gap:10px;border:1px solid var(--line);border-radius:8px;padding:10px 12px;cursor:pointer;background:var(--bg)}
+.lang-opt input{accent-color:var(--accent);margin-top:3px}
+.lang-opt:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+.lang-opt>span{display:grid;gap:2px}
+.lang-opt b{font-weight:600;font-size:.92rem}
+.lang-opt small{color:var(--muted);font-size:.8rem}
+.lang-opt q{quotes:none;margin-top:4px;font-size:.88rem;color:var(--ink);font-style:italic}
+.lang-opt q[dir=rtl],.lang-opt [lang=ur]{font-family:"Noto Nastaliq Urdu",serif;font-style:normal;line-height:2}
+
+.opt:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+input[type=text],input[type=url],input[type=number]{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:7px;padding:9px 11px;width:100%}
+input[type=number]{width:110px}
+.inline{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:6px;max-height:260px;overflow:auto;padding:4px 0}
+.chip{border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:.84rem;cursor:pointer;background:var(--bg);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip-group{font:500 .7rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);width:100%;margin-top:6px}
+.handoff{border:1px dashed var(--accent);border-radius:10px;padding:14px;display:grid;gap:8px;background:var(--accent-soft)}
+.handoff p{margin:0;font-size:.9rem}
+.handoff code{display:block;white-space:pre-wrap;font:400 .82rem var(--f-mono);background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:10px;user-select:all}
+.handoff button{justify-self:start;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:8px;padding:7px 12px;font:600 .85rem var(--f-body);cursor:pointer}
+.cap-modal{position:fixed;inset:0;z-index:60;background:rgba(10,12,16,.62);display:flex;align-items:center;justify-content:center;
+  padding:calc(16px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.cap-panel{background:var(--panel);color:var(--ink);border-radius:14px;width:min(1100px,100%);max-height:100%;display:grid;grid-template-rows:auto 1fr;overflow:hidden;border:1px solid var(--line)}
+.cap-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.cap-head p{margin:2px 0 0;color:var(--muted);font-size:.85rem}
+.cap-body{overflow:auto;padding:14px 18px 22px;display:grid;gap:18px}
+.cap-group h4{margin:0 0 8px;font:600 .75rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.cap-tile{border:2px solid transparent;border-radius:10px;background:var(--bg);padding:6px;cursor:pointer;display:grid;gap:6px;text-align:left;font:inherit;color:inherit}
+.cap-tile:hover{border-color:var(--line)}
+.cap-tile[aria-pressed="true"]{border-color:var(--accent)}
+.cap-tile canvas{width:100%;aspect-ratio:8/5;height:auto;border-radius:6px;background:#16181D;display:block}
+.cap-tile .cap-name{font:600 .8rem var(--f-body)}
+.cap-tile .cap-hint{font-size:.72rem;color:var(--muted);line-height:1.3}
+.cap-default{display:grid;place-items:center;aspect-ratio:8/5;border-radius:6px;background:var(--accent-soft);color:var(--ink);font:600 .8rem var(--f-body);text-align:center;padding:8px}
+[hidden]{display:none!important}
+.motion-wrap{position:relative;width:fit-content;max-width:100%;margin:0 auto}
+.cap-pos{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:4px 0 10px;max-width:300px}
+.cap-pos .cap-pos-label{font:500 .7rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);width:100%}
+.cap-pos .chip{padding:4px 10px;font-size:.8rem}
+.cap-pos .cap-reset{border:none;background:transparent;color:var(--muted);text-decoration:underline;font:500 .8rem var(--f-body);cursor:pointer;padding:4px 2px}
+.cap-pos .cap-pos-hint{font-size:.75rem;color:var(--muted);width:100%}
+.fs-btn{position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:9px;border:none;background:rgba(0,0,0,.55);color:#fff;display:grid;place-items:center;cursor:pointer}
+.fs-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.theater{position:fixed;inset:0;z-index:50;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+  padding:calc(12px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.theater canvas{height:auto;width:auto;max-height:calc(100vh - 110px);max-width:calc(100vw - 32px);aspect-ratio:9/16;border-radius:10px;background:#000;cursor:pointer}
+.theater .tbar{display:flex;align-items:center;gap:12px;width:min(100%,560px);color:#fff}
+.theater .bar{background:rgba(255,255,255,.22)}
+.theater .time{color:rgba(255,255,255,.7)}
+.theater .close{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:8px;padding:8px 14px;font:600 .9rem var(--f-body);cursor:pointer}
+.render-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;justify-content:center;margin-top:10px}
+.render-btn{border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:8px;padding:8px 14px;font:600 .85rem var(--f-body);cursor:pointer}
+.render-btn:hover{background:var(--ink);color:var(--bg)}
+.render-btn:disabled{opacity:.5;cursor:default}
+.render-status{font:500 .75rem var(--f-mono);color:var(--muted)}
+.renderall{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.motion-note{font:500 .75rem var(--f-mono);color:var(--muted);text-align:center;margin:6px 0 0}
+/* Layout: an editor's cut list. One column of clip strips, timecodes in mono, amber in/out markers; summary bar on top, send bar at the bottom. */
+:root{
+  --bg:#eef0f3; --panel:#ffffff; --ink:#15181d; --muted:#5d6572; --line:#d7dbe2;
+  --accent:#b86e00; --accent-soft:#fbefd9; --danger:#b3261e; --danger-soft:#fbe4e2; --ok:#1d7a4d;
+  --track:#e3e6eb;
+  --f-display:"Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --f-body:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111418; --panel:#191d23; --ink:#e8eaee; --muted:#9aa3b0; --line:#2b313a;
+  --accent:#f0a43a; --accent-soft:#2f2412; --danger:#f2847b; --danger-soft:#3a1b19; --ok:#5fcf98; --track:#2a3038; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111418; --panel:#191d23; --ink:#e8eaee; --muted:#9aa3b0; --line:#2b313a;
+  --accent:#f0a43a; --accent-soft:#2f2412; --danger:#f2847b; --danger-soft:#3a1b19; --ok:#5fcf98; --track:#2a3038; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 120px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:22px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.1}
+h2{font-size:1.15rem}
+.eyebrow{font:500 .72rem/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+header{display:grid;gap:10px}
+.summary{display:flex;flex-wrap:wrap;gap:8px 18px;font:500 .85rem var(--f-mono);color:var(--muted)}
+.summary b{color:var(--ink);font-weight:500}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}
+.speakers{display:grid;gap:12px}
+.spk-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.spk-row label{display:flex;align-items:center;gap:8px;font-weight:600;min-width:120px}
+.spk-row input{width:18px;height:18px;accent-color:var(--accent)}
+.clips{display:grid;gap:14px}
+.clip{background:var(--panel);border:1px solid var(--line);border-radius:10px;display:grid;grid-template-columns:56px 1fr;overflow:hidden}
+.clip .num{border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;padding-top:18px;gap:6px;font:500 1.05rem var(--f-mono);color:var(--accent)}
+.clip .num::after{content:"";width:2px;flex:1;background:linear-gradient(var(--accent),transparent);opacity:.35;margin-bottom:14px}
+.clip .body{padding:16px 18px 18px;display:grid;gap:12px;min-width:0}
+.clip.deleted{border-style:dashed;background:transparent}
+.clip.deleted .body > :not(.topline):not(.restore-note){display:none}
+.clip.deleted .num{color:var(--muted)}
+.clip.offvoice{opacity:.55}
+.voice-note{font:500 .75rem var(--f-mono);color:var(--muted);margin:0}
+.clip.deleted h3{text-decoration:line-through;color:var(--muted)}
+.topline{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.topline > div{min-width:0}
+.tc{font:400 .8rem var(--f-mono);color:var(--muted);margin-top:4px}
+.tc .in,.tc .out{color:var(--accent)}
+.idea{margin:0;max-width:65ch}
+.player{display:flex;align-items:center;gap:12px}
+.play{width:40px;height:40px;border-radius:50%;border:none;background:var(--accent);color:var(--panel);display:grid;place-items:center;cursor:pointer;flex:none}
+.play:disabled{background:var(--track);color:var(--muted);cursor:default}
+.play svg{width:16px;height:16px;fill:currentColor}
+.bar{flex:1;height:6px;background:var(--track);border-radius:3px;position:relative;cursor:pointer;min-width:0}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:3px;width:0}
+.time{font:400 .78rem var(--f-mono);color:var(--muted);min-width:84px;text-align:right}
+details summary{cursor:pointer;color:var(--muted);font-size:.88rem}
+details p{margin:8px 0 0;max-width:65ch;font-size:.92rem;color:var(--ink)}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.field{display:grid;gap:4px}
+.field span{font:500 .7rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:7px;padding:8px 10px;width:100%}
+textarea{min-height:64px;resize:vertical}
+select:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.del{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:7px;padding:6px 10px;font:500 .82rem var(--f-body);cursor:pointer;flex:none;display:flex;gap:6px;align-items:center}
+.del:hover{color:var(--danger);border-color:var(--danger);background:var(--danger-soft)}
+.clip.deleted .del{color:var(--ink)}
+.restore-note{font-size:.85rem;color:var(--muted);margin:0}
+.saved{font:400 .75rem var(--f-mono);color:var(--ok);min-height:1em}
+.sendbar{position:fixed;left:0;right:0;bottom:0;background:var(--panel);border-top:1px solid var(--line);
+  padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.sendbar .in{max-width:860px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between}
+.send{background:var(--ink);color:var(--bg);border:none;border-radius:8px;padding:11px 18px;font:600 .95rem var(--f-body);cursor:pointer}
+.send:disabled{opacity:.5;cursor:default}
+.status{font-size:.88rem;color:var(--muted)}
+.empty{text-align:center;padding:40px 18px;color:var(--muted)}
+@media (max-width:520px){.clip{grid-template-columns:40px 1fr}.clip .body{padding:14px}.time{min-width:0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow" id="source">11th Hour · Season 6 · Episode 6</span>
+    <h1 id="ep-title">Why You Assume the Worst</h1>
+    <div class="summary" id="summary"><span>Loading clips…</span></div>
+    <div class="renderall" id="renderall" hidden><button class="render-btn" id="render-all" type="button">Render all MP4s</button><span class="render-status" id="render-all-status"></span></div>
+  </header>
+  <nav class="tabs" role="tablist" aria-label="Board sections">
+    <button type="button" role="tab" id="tab-btn-setup" aria-selected="false" data-tab="setup">Setup</button>
+    <button type="button" role="tab" id="tab-btn-review" aria-selected="true" data-tab="review">Review</button>
+  </nav>
+
+  <section id="tab-setup" class="setup" hidden>
+    <div class="panel q">
+      <h3>The video or audio</h3>
+      <p class="help">Paste a YouTube link, or a Google Drive link to a video or audio file (MP4, MOV, MP3, M4A, WAV…). To use a file from your computer, attach it in the chat with Claude (or put it in Drive and paste that link).</p>
+      <label class="field" for="in-source"><span>Video or audio link</span><input type="url" id="in-source" placeholder="https://www.youtube.com/watch?v=…"></label>
+    </div>
+    <div class="panel q">
+      <h3>What should the clips be about?</h3>
+      <p class="help">Optional. Without a brief, Claude picks the strongest self-contained moments.</p>
+      <textarea id="in-brief" placeholder="e.g. Practical advice about anxiety, nothing about the guest's book"></textarea>
+    </div>
+    <div class="panel q">
+      <h3>How many clips?</h3>
+      <div class="opts" id="in-count-mode">
+        <label class="opt"><input type="radio" name="count" value="auto"> As many as are meaningful</label>
+        <label class="opt"><input type="radio" name="count" value="fixed"> About <input type="number" id="in-count" min="1" max="50" value="10" aria-label="Number of clips"></label>
+      </div>
+    </div>
+    <div class="panel q">
+      <h3>Style</h3>
+      <div class="opts" id="in-style-mode">
+        <label class="opt"><input type="radio" name="stylemode" value="auto"> Claude picks per clip</label>
+        <label class="opt"><input type="radio" name="stylemode" value="same"> One style for all</label>
+        <label class="opt"><input type="radio" name="stylemode" value="shortlist"> From my shortlist</label>
+        <label class="opt"><input type="radio" name="stylemode" value="mixed"> Mixed: I'll set some per clip</label>
+      </div>
+      <div id="style-pick" hidden>
+        <p class="help" id="style-pick-help"></p>
+        <div class="chips" id="style-chips"></div>
+        <label class="field" for="in-style-custom"><span>Or describe your own</span><input type="text" id="in-style-custom" placeholder="e.g. soft watercolour with gold leaf"></label>
+      </div>
+    </div>
+    <div class="panel q">
+      <h3>Dimensions</h3>
+      <div class="opts" id="in-format">
+        <label class="opt"><input type="radio" name="format" value="9:16"> All portrait 9:16</label>
+        <label class="opt"><input type="radio" name="format" value="16:9"> All landscape 16:9</label>
+        <label class="opt"><input type="radio" name="format" value="both"> Both for every clip</label>
+        <label class="opt"><input type="radio" name="format" value="mixed"> Mixed, per clip</label>
+      </div>
+    </div>
+    <div class="panel q">
+      <h3>Text in the videos</h3>
+      <p class="help" id="lang-help">Which language and script should on-screen text and captions use? The examples show a speaker who mixes English and Urdu: <i>"I'm fine, chalo shuru karte hain."</i></p>
+      <div class="lang-opts" id="in-textlang">
+        <p class="lang-group">One language throughout</p>
+        <label class="lang-opt"><input type="radio" name="textlang" value="english"><span><b>All English</b><small>Other-language parts are translated into English.</small><q>I'm fine, let's get started.</q></span></label>
+        <label class="lang-opt"><input type="radio" name="textlang" value="native"><span><b>All in the video's language, its own script</b><small>English parts are translated; written in Urdu script.</small><q dir="rtl" lang="ur">میں ٹھیک ہوں، چلو شروع کرتے ہیں۔</q></span></label>
+        <label class="lang-opt"><input type="radio" name="textlang" value="roman"><span><b>All in the video's language, English letters</b><small>English parts are translated; written in Roman Urdu.</small><q>Main theek hoon, chalo shuru karte hain.</q></span></label>
+        <p class="lang-group">Follow the speaker (for videos that mix languages)</p>
+        <label class="lang-opt"><input type="radio" name="textlang" value="mixed-roman"><span><b>As spoken, all in English letters</b><small>English stays English; Urdu stays Urdu, written in English letters.</small><q>I'm fine, chalo shuru karte hain.</q></span></label>
+        <label class="lang-opt"><input type="radio" name="textlang" value="mixed-native"><span><b>As spoken, each in its own script</b><small>English stays English; Urdu stays Urdu, written in Urdu script.</small><q>I'm fine, <span dir="rtl" lang="ur">چلو شروع کرتے ہیں</span></q></span></label>
+      </div>
+      <p class="help">This applies to captions and to any other words on screen.</p>
+      <div class="opts" id="in-captions">
+        <label class="opt"><input type="radio" name="captions" value="on"> Captions on</label>
+        <label class="opt"><input type="radio" name="captions" value="off"> No captions</label>
+      </div>
+      <div class="lang-opts" id="in-capwording">
+        <p class="lang-group">Caption wording</p>
+        <label class="lang-opt"><input type="radio" name="capwording" value="verbatim"><span><b>Exactly as spoken</b><small>Every word the speaker says, including repeats, "umm" and restarts.</small><q>So I, I think, umm, you know, we should start.</q></span></label>
+        <label class="lang-opt"><input type="radio" name="capwording" value="refined"><span><b>Lightly refined</b><small>Fillers, repeats and false starts removed; the speaker's own words and meaning kept.</small><q>I think we should start.</q></span></label>
+      </div>
+    </div>
+    <div class="panel q">
+      <h3>Where should finished MP4s go?</h3>
+      <div class="opts" id="in-dest">
+        <label class="opt"><input type="radio" name="dest" value="chat"> Here in the chat</label>
+        <label class="opt"><input type="radio" name="dest" value="drive"> A Google Drive folder</label>
+        <label class="opt"><input type="radio" name="dest" value="both"> Both</label>
+      </div>
+      <label class="field" for="in-folder" id="folder-field" hidden><span>Drive folder name</span><input type="text" id="in-folder" placeholder="Named after the video if left empty"></label>
+    </div>
+    <div class="panel q">
+      <h3>Anything else?</h3>
+      <textarea id="in-notes" placeholder="Optional"></textarea>
+      <div class="inline"><button class="send" id="start" type="button">Start</button><span class="status" id="start-status"></span><span class="saved" id="setup-saved"></span></div>
+      <div id="start-handoff"></div>
+    </div>
+  </section>
+
+  <div id="tab-review">
+
+  <section class="panel speakers" id="speakers" hidden>
+    <h2>Whose voices?</h2>
+    <p class="muted" style="margin:0">Play each sample and tick every voice you want in the clips. Clips are picked only from the voices you confirm.</p>
+    <div id="spk-list" class="speakers"></div>
+  </section>
+
+  <section class="clips" id="clips">
+    <div class="empty panel" id="empty">Clips will appear here once they are extracted. Each one gets a play button, notes, style and format.</div>
+  </section>
+
+  <section class="panel" id="overall-section" style="display:grid;gap:8px">
+    <h2>Anything else?</h2>
+    <label class="field" for="overall"><span>Overall notes: missing moments, things to add</span>
+      <textarea id="overall" placeholder="e.g. Add the part where he explains the 70 excuses idea"></textarea></label>
+    <div class="saved" id="overall-saved"></div>
+  </section>
+  </div>
+</div>
+
+<div class="theater" id="theater" hidden role="dialog" aria-label="Full screen preview">
+  <button class="close" id="th-close" type="button">Close</button>
+  <canvas id="th-canvas" width="1080" height="1920"></canvas>
+  <div class="tbar"><button class="play" id="th-play" type="button" aria-label="Play"></button><div class="bar" id="th-bar"><i></i></div><span class="time" id="th-time"></span></div>
+</div>
+
+<div class="sendbar"><div class="in">
+  <span class="status" id="send-status">Review the clips, then send your decisions to Claude.</span>
+  <button class="send" id="send" type="button">Send review to Claude</button>
+</div></div>
+
+<script>
+const STYLE_GROUPS = {
+  "Typography": ["Kinetic typography","Word-by-word captions","Swiss grid typography","Brutalist type","Editorial serif","Typewriter","Neon sign","Handwritten notes","Calligraphic accents","Urdu nastaliq lettering"],
+  "Illustration": ["Minimal line art","Single continuous line","Paper cut-out","Watercolor wash","Ink brush","Chalkboard sketch","Whiteboard explainer","Notebook doodles","Flat vector scenes","Isometric world","Storybook illustration"],
+  "Graphic and geometric": ["Bold infographic","Data diagrams","Islamic geometric patterns","Arabesque tiles","Bauhaus shapes","Memphis pattern","Color-block Mondrian","Morphing blobs","Particle fields","Constellation lines"],
+  "Print and retro": ["Risograph print","Halftone comic","Old manuscript","Vintage film grain","Newspaper cutouts","Synthwave 80s","VHS glitch","Pixel art","Blueprint"],
+  "Cinematic and atmospheric": ["Cinematic dark","Lantern glow","Night sky and stars","Desert dunes at dusk","Rain on glass","Ink in water","Light leaks and bokeh","Monochrome minimal","Candlelit study"],
+  "Dimensional": ["Low-poly 3D","Claymation look","Origami paper folds","Glass and frost","Gradient mesh","Layered parallax"],
+  "Collage": ["Editorial collage","Scrapbook","Mixed media","Torn paper layers"]
+};
+const FORMATS = [["9:16","Portrait 9:16"],["16:9","Landscape 16:9"],["both","Both"]];
+const $ = s => document.querySelector(s);
+const fmt = t => { t=Math.max(0,t||0); const h=Math.floor(t/3600), m=Math.floor(t%3600/60), s=Math.floor(t%60); return (h?h+":"+String(m).padStart(2,"0"):m)+":"+String(s).padStart(2,"0"); };
+const ICON_PLAY = '<svg viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z"/></svg>';
+const ICON_PAUSE = '<svg viewBox="0 0 16 16"><path d="M3.5 2.5h3v11h-3zM9.5 2.5h3v11h-3z"/></svg>';
+
+let db = null, clips = [], meta = {}, current = null;
+const audio = new Audio(); audio.preload = "none";
+
+function playerFor(card, src){
+  const btn = card.querySelector(".play"), bar = card.querySelector(".bar"), fill = bar.querySelector("i"), time = card.querySelector(".time");
+  if(!src){ btn.disabled = true; time.textContent = "audio pending"; return; }
+  btn.onclick = () => {
+    if(current === card && !audio.paused){ audio.pause(); return; }
+    if(current !== card){ if(current) resetPlayer(current); current = card; audio.src = src; }
+    audio.play().catch(()=>{ time.textContent = "can't play"; });
+  };
+  bar.onclick = e => { if(current!==card || !audio.duration) return; const r = bar.getBoundingClientRect(); audio.currentTime = (e.clientX-r.left)/r.width*audio.duration; drawMotion(card, audio.currentTime); };
+  const cv = card.querySelector(".stage-canvas"); if(cv) cv.onclick = () => { if(cv._dragged){ cv._dragged = false; return; } btn.click(); };
+  const fsb = card.querySelector(".fs-btn"); if(fsb) fsb.onclick = () => openTheater(card);
+}
+function resetPlayer(card){ card.querySelector(".play").innerHTML = ICON_PLAY; card.querySelector(".bar i").style.width = "0"; const d = card.dataset.dur; card.querySelector(".time").textContent = "0:00 / " + fmt(+d); }
+audio.addEventListener("play", ()=>{ if(!current) return; current.querySelector(".play").innerHTML = ICON_PAUSE; requestAnimationFrame(motionLoop); });
+audio.addEventListener("seeked", ()=> current && drawMotion(current, audio.currentTime));
+
+// ---- live motion previews (same style modules as the MP4 renderer) ----
+const MD = window.MOTION_DATA || null, MS = window.MOTION_STYLES || {};
+const MOTION_FONTS = ['italic 600 40px "Cormorant Garamond"','italic 500 40px "Cormorant Garamond"','600 40px "Cormorant Garamond"','400 40px Inter','600 40px Inter','800 40px Inter','40px "Special Elite"','40px Bangers','700 40px Caveat','40px "Patrick Hand"','700 40px "Playfair Display"','900 40px "Playfair Display"','italic 400 40px "Playfair Display"','40px Amiri','700 40px Amiri','40px "Noto Nastaliq Urdu"','40px "Bebas Neue"','40px "Archivo Black"','40px "DM Serif Display"','italic 40px "DM Serif Display"','40px "Space Mono"','40px "Libre Baskerville"','italic 40px "Libre Baskerville"','500 40px Oswald','700 40px Oswald','600 40px Fraunces','italic 400 40px Fraunces'];
+const fontsReady = Promise.all(MOTION_FONTS.map(f=>document.fonts.load(f).catch(()=>{}))).catch(()=>{});
+const mclamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)), mlerp=(a,b,t)=>a+(b-a)*t;
+const MEASE={linear:t=>t,inQuad:t=>t*t,outQuad:t=>1-(1-t)*(1-t),inOutQuad:t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2,outCubic:t=>1-Math.pow(1-t,3),inCubic:t=>t*t*t,inOutCubic:t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2,outBack:t=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(t-1,3)+c1*Math.pow(t-1,2);},outElastic:t=>(t===0||t===1?t:Math.pow(2,-10*t)*Math.sin((t*10-.75)*(2*Math.PI)/3)+1),outExpo:t=>t===1?1:1-Math.pow(2,-10*t)};
+function mrng(seed){ let s=seed>>>0||1; return ()=>((s=(s*1664525+1013904223)>>>0)/4294967296); }
+function mnoise1(x,seed=0){ const h=i=>{ let n=(i*374761393+seed*668265263)|0; n=(n^(n>>13))*1274126177; return ((n^(n>>16))>>>0)/4294967296; }; const i=Math.floor(x), f=x-i, u=f*f*(3-2*f); return mlerp(h(i),h(i+1),u); }
+function mwrap(ctx,text,maxW){ const words=text.split(/\s+/), lines=[]; let cur=""; for(const w of words){ const t=cur?cur+" "+w:w; if(ctx.measureText(t).width>maxW && cur){ lines.push(cur); cur=w; } else cur=t; } if(cur) lines.push(cur); return lines; }
+function mfit(ctx,text,fontFn,maxW,maxSize,minSize=36,maxLines=4){ for(let s=maxSize;s>=minSize;s-=2){ ctx.font=fontFn(s); const lines=mwrap(ctx,text,maxW); if(lines.length<=maxLines && lines.every(l=>ctx.measureText(l).width<=maxW)) return {size:s,lines}; } ctx.font=fontFn(minSize); return {size:minSize,lines:mwrap(ctx,text,maxW)}; }
+function makeHelpers(d){
+  const beats = d.beats.map((b,i,arr)=>({...b,i,start:b.t,end:i+1<arr.length?arr[i+1].t:d.dur}));
+  const env = d.env;
+  const F = frameOf(d.n);
+  return { W:F.W, H:F.H, FPS:30, dur:d.dur, clip:d, beats, env, meta:(MD && MD.meta) || { label:"", credit:"" },
+    get externalCaptions(){ const c = clips.find(x=>x.n===d.n); return !!(c && c.captionStyle); }, clamp:mclamp, lerp:mlerp, ease:MEASE, rng:mrng, noise1:mnoise1, wrap:mwrap, fitText:mfit,
+    voice: t => (env[mclamp(Math.floor(t*30),0,env.length-1)]||0)/255,
+    beatAt: t => { let cur=beats[0]; for(const b of beats) if(t>=b.start) cur=b; return cur; },
+    phase: (b,t,inDur=.7,outDur=.45) => ({ inT:mclamp((t-b.start)/inDur), outT:mclamp((t-(b.end-outDur))/outDur), age:t-b.start, life:mclamp((t-b.start)/Math.max(.01,b.end-b.start)), active:t>=b.start&&t<b.end }) };
+}
+const motionCache = {};
+function motionFor(n){
+  if(motionCache[n] !== undefined) return motionCache[n];
+  const d = MD && MD.clips[n]; const style = d && d.ready && MS[d.styleFile];
+  if(!style){ return null; }
+  try{ const H = makeHelpers(d); motionCache[n] = { style, H, state: style.setup ? style.setup(H) : {} }; }
+  catch(e){ console.error(e); motionCache[n] = null; }
+  return motionCache[n];
+}
+// Frame size of a clip, exactly as engine.js renders it (build.js writes it per clip).
+function frameOf(n){ const d = MD && MD.clips[n]; return d && d.W ? { W: d.W, H: d.H } : { W: 1080, H: 1920 }; }
+// The preview canvas IS the render canvas: full frame size, identity transform, shown smaller with CSS.
+// Never scale the context under a style module: modules may call setTransform/resetTransform
+// (normal canvas code), which would silently undo that scale and crop the picture.
+function sizeCanvas(cv, F){
+  if(cv.width !== F.W || cv.height !== F.H){ cv.width = F.W; cv.height = F.H; }
+  const ar = F.W + " / " + F.H; if(cv.style.aspectRatio !== ar) cv.style.aspectRatio = ar;
+}
+function drawMotion(card, t){
+  if(stage()!=="motion" || !card) return;
+  const n = +card.dataset.n, m = motionFor(n);
+  if(!m) return;
+  const F = frameOf(n), cv = card.querySelector(".stage-canvas");
+  if(!cv) return;
+  sizeCanvas(cv, F);
+  const ctx = cv.getContext("2d");
+  ctx.setTransform(1,0,0,1,0,0); ctx.save();
+  const tt = Math.max(0, Math.min(t, m.H.dur-0.001));
+  try{ m.style.frame(ctx, tt, m.H, m.state); }catch(e){ console.error(e); }
+  ctx.restore(); ctx.setTransform(1,0,0,1,0,0);
+  {
+    const cs = captionStateFor(n);
+    if(cs){ ctx.save();
+      try{ const o = {W:F.W, H:F.H, t: tt, groups: cs.groups, values: cs.values, motion:"smooth"};
+        let lay = CAP.draw(ctx, o);
+        // while dragging over a gap between captions, keep showing the last caption so the user sees what moves
+        if(!lay && card._capDragging && card._capT != null){ o.t = card._capT; lay = CAP.draw(ctx, o); }
+        if(lay && lay.div){ card._capLay = { x: lay.div.x, y: lay.div.y, w: lay.div.w, h: lay.div.h }; if(o.t === tt) card._capT = tt; }
+      }catch(e){ console.error(e); }
+      ctx.restore();
+      if(card._capDragging && card._capLay) drawCaptionGuides(ctx, card._capLay, card._capCentred, F); }
+  }
+  // full screen shows the same pixels
+  if(theaterCard === card){ const th = $("#th-canvas"); sizeCanvas(th, F); const g = th.getContext("2d"); g.setTransform(1,0,0,1,0,0); g.drawImage(cv, 0, 0); }
+  card._lastT = t;
+}
+function drawCaptionGuides(ctx, L, centred, F){
+  ctx.save(); ctx.setLineDash([14, 10]); ctx.lineWidth = 4; ctx.strokeStyle = "rgba(255,255,255,0.9)"; ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowBlur = 6;
+  ctx.strokeRect(L.x - 16, L.y - 16, L.w + 32, L.h + 32);
+  if(centred){ ctx.setLineDash([]); ctx.lineWidth = 3; ctx.strokeStyle = "rgba(255,214,90,0.95)"; ctx.beginPath(); ctx.moveTo(F.W / 2, 0); ctx.lineTo(F.W / 2, F.H); ctx.stroke(); }
+  ctx.restore();
+}
+
+// ---- drag a caption template to move it (saved as captionStyle.overrides.nudgeX/nudgeY) ----
+const clipOfCard = card => card && clips.find(x => x.id === card.dataset.id);
+const capOverrides = c => (c && c.captionStyle && c.captionStyle.overrides) || {};
+function redrawCard(card){ drawMotion(card, current === card ? audio.currentTime : (card._lastT != null ? card._lastT : posterTime(+card.dataset.n))); }
+function framePoint(cv, e){ const r = cv.getBoundingClientRect(); return { x: (e.clientX - r.left) / r.width * cv.width, y: (e.clientY - r.top) / r.height * cv.height }; }
+function captionHit(card, p){ const L = card && card._capLay; if(!L) return false; const pad = 36; return p.x >= L.x - pad && p.x <= L.x + L.w + pad && p.y >= L.y - pad && p.y <= L.y + L.h + pad; }
+async function saveCaptionStyle(card, c){
+  syncCaptionPos(card, c);
+  try{ await db.collection("clips").doc(c.id).update({ captionStyle: c.captionStyle || null }); }
+  catch(e){ card.querySelector(".render-status").textContent = "Couldn't save the caption position. Try again."; }
+}
+function attachCaptionDrag(cv, getCard){
+  let drag = null;
+  cv.addEventListener("pointerdown", e => {
+    const card = getCard(), c = clipOfCard(card);
+    if(!CAP || !c || !c.captionStyle || stage() !== "motion") return;
+    const p = framePoint(cv, e); if(!captionHit(card, p)) return;
+    const v = CAP.resolve(c.captionStyle.preset, capOverrides(c));
+    drag = { card, c, p0: p, nx: v.nudgeX || 0, ny: v.nudgeY || 0, id: e.pointerId, moved: false, F: frameOf(+card.dataset.n) };
+    try{ cv.setPointerCapture(e.pointerId); }catch(_){}
+    cv.style.cursor = "grabbing"; e.preventDefault();
+  });
+  cv.addEventListener("pointermove", e => {
+    if(!drag){ const card = getCard(), c = clipOfCard(card); cv.style.cursor = c && c.captionStyle && captionHit(card, framePoint(cv, e)) ? "grab" : ""; return; }
+    if(e.pointerId !== drag.id) return;
+    const p = framePoint(cv, e), dx = p.x - drag.p0.x, dy = p.y - drag.p0.y;
+    if(!drag.moved && Math.hypot(dx, dy) < 14) return;
+    drag.moved = true;
+    let nx = mclamp(drag.nx + dx / drag.F.W, -0.45, 0.45), ny = mclamp(drag.ny + dy / drag.F.H, -0.45, 0.45);
+    const centred = Math.abs(nx) < 0.018; if(centred) nx = 0;
+    drag.c.captionStyle = { ...drag.c.captionStyle, overrides: { ...capOverrides(drag.c), nudgeX: Math.round(nx * 1000) / 1000, nudgeY: Math.round(ny * 1000) / 1000 } };
+    drag.card._capDragging = true; drag.card._capCentred = centred;
+    redrawCard(drag.card);
+  });
+  const end = e => {
+    if(!drag || (e && e.pointerId !== drag.id)) return;
+    const d = drag; drag = null; cv.style.cursor = ""; d.card._capDragging = false;
+    if(d.moved){ cv._dragged = true; saveCaptionStyle(d.card, d.c); }
+    redrawCard(d.card);
+  };
+  cv.addEventListener("pointerup", end); cv.addEventListener("pointercancel", end);
+}
+function setCaptionPosition(card, pos){
+  const c = clipOfCard(card); if(!c || !c.captionStyle) return;
+  const o = { ...capOverrides(c) }; delete o.nudgeX; delete o.nudgeY;
+  if(pos) o.position = pos; else delete o.position;
+  c.captionStyle = { ...c.captionStyle, overrides: o };
+  redrawCard(card); saveCaptionStyle(card, c);
+}
+function syncCaptionPos(card, c){
+  const box = card.querySelector(".cap-pos"); if(!box) return;
+  const on = !!(CAP && c && c.captionStyle && stage() === "motion"); box.hidden = !on; if(!on) return;
+  const o = capOverrides(c), v = CAP.resolve(c.captionStyle.preset, o), moved = !!(o.nudgeX || o.nudgeY);
+  box.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", !moved && v.position === b.dataset.pos));
+  box.querySelector(".cap-reset").hidden = !("position" in o || moved);
+  const cv = card.querySelector(".stage-canvas"); if(cv) cv.style.touchAction = "none";
+}
+
+// ---- keep the reader's place: overlays and live updates must never move the page ----
+let lockedY = null;
+function lockScroll(){ if(lockedY === null){ lockedY = window.scrollY; document.body.style.overflow = "hidden"; } }
+function unlockScroll(){ if(lockedY !== null){ const y = lockedY; lockedY = null; document.body.style.overflow = ""; window.scrollTo(0, y); requestAnimationFrame(() => window.scrollTo(0, y)); } }
+function keepScroll(fn){ const y = lockedY !== null ? null : window.scrollY; fn(); if(y !== null && Math.abs(window.scrollY - y) > 1){ window.scrollTo(0, y); requestAnimationFrame(() => window.scrollTo(0, y)); } }
+
+// ---- optional caption templates (ported from the user's Animora project) ----
+const CAP = window.CAPTIONS && window.CAPTION_TEMPLATES ? window.CAPTIONS.load(window.CAPTION_TEMPLATES) : null;
+let capFontsReady = null;
+function loadCaptionFonts(){
+  if(capFontsReady || !CAP) return capFontsReady || Promise.resolve();
+  if(window.CAPTION_FONTS_URL){ const l = document.createElement("link"); l.rel = "stylesheet"; l.href = window.CAPTION_FONTS_URL; document.head.appendChild(l); }
+  capFontsReady = Promise.all((CAP.fonts||[]).map(f => document.fonts.load(f).catch(()=>{})));
+  return capFontsReady;
+}
+const capCache = {};
+function captionStateFor(n, presetOverride){
+  if(!CAP) return null;
+  const c = clips.find(x=>x.n===n); const preset = presetOverride || (c && c.captionStyle && c.captionStyle.preset);
+  if(!preset) return null;
+  const ov = (c && c.captionStyle && !presetOverride && c.captionStyle.overrides) || {};
+  const key = n + ":" + preset + ":" + JSON.stringify(ov);
+  if(!capCache[key]){ const values = CAP.resolve(preset, (c && c.captionStyle && !presetOverride && c.captionStyle.overrides) || {});
+    capCache[key] = { values, groups: CAP.groupWords((window.CAPTION_WORDS||{})["clip"+n] || [], values) }; }
+  return capCache[key];
+}
+let capModal = null, capCard = null, capHover = null;
+function captionPosterTime(n){ const w = (window.CAPTION_WORDS||{})["clip"+n] || []; return w.length > 3 ? w[2].s + 0.15 : 1.5; }
+function openCaptions(card){
+  if(!CAP){ return; }
+  capCard = card; const n = +card.dataset.n, c = clips.find(x=>x.n===n) || {};
+  const modal = document.createElement("div"); modal.className = "cap-modal"; modal.setAttribute("role","dialog"); modal.setAttribute("aria-label","Caption styles");
+  modal.innerHTML = `<div class="cap-panel"><div class="cap-head"><div><h2>Captions for #${n}</h2><p>Pick a style to apply it to this video. Hover a tile to see it move.</p></div><button class="render-btn" type="button">Close</button></div><div class="cap-body"></div></div>`;
+  lockScroll(); document.body.appendChild(modal); capModal = modal;
+  modal.querySelector(".cap-head button").onclick = closeCaptions;
+  modal.onclick = e => { if(e.target === modal) closeCaptions(); };
+  const body = modal.querySelector(".cap-body");
+  const current = c.captionStyle && c.captionStyle.preset;
+  // default tile
+  const dg = document.createElement("section"); dg.className = "cap-group"; dg.innerHTML = `<h4>Default</h4><div class="cap-grid"></div>`;
+  const dt = document.createElement("button"); dt.type = "button"; dt.className = "cap-tile"; dt.setAttribute("aria-pressed", !current);
+  dt.innerHTML = `<div class="cap-default">Designed for this clip</div><span class="cap-name">Designed for this clip</span><span class="cap-hint">The captions made as part of this video's look.</span>`;
+  dt.onclick = () => pickCaption(card, null); dg.querySelector(".cap-grid").appendChild(dt); body.appendChild(dg);
+  const tiles = [];
+  for(const g of CAP.data.groups){
+    const list = CAP.templates.filter(t => t.group === g.id && !t.footageOnly); if(!list.length) continue;
+    const sec = document.createElement("section"); sec.className = "cap-group"; sec.innerHTML = `<h4></h4><div class="cap-grid"></div>`; sec.querySelector("h4").textContent = g.label;
+    for(const tpl of list){
+      const b = document.createElement("button"); b.type = "button"; b.className = "cap-tile"; b.setAttribute("aria-pressed", current === tpl.id); b.title = tpl.hint;
+      b.innerHTML = `<canvas width="480" height="300" aria-hidden="true"></canvas><span class="cap-name"></span><span class="cap-hint"></span>`;
+      b.querySelector(".cap-name").textContent = tpl.label; b.querySelector(".cap-hint").textContent = tpl.hint;
+      b.onclick = () => pickCaption(card, tpl.id);
+      b.onmouseenter = b.onfocus = () => animateTile(b, n, tpl.id); b.onmouseleave = b.onblur = () => { capHover = null; drawTile(b, n, tpl.id, captionPosterTime(n)); };
+      sec.querySelector(".cap-grid").appendChild(b); tiles.push([b, tpl.id]);
+    }
+    body.appendChild(sec);
+  }
+  loadCaptionFonts().then(() => {
+    // draw tiles lazily as they scroll into view
+    const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ const pair = tiles.find(p => p[0] === e.target); if(pair){ drawTile(pair[0], n, pair[1], captionPosterTime(n)); io.unobserve(e.target); } } }), { root: body, rootMargin: "200px" });
+    tiles.forEach(([b]) => io.observe(b));
+  });
+  modal.querySelector(".cap-head button").focus({ preventScroll: true });
+}
+// A tile shows only the caption, on a calm neutral stage, cropped to the caption and enlarged so the text reads clearly.
+function drawTile(btn, n, preset, t){
+  const cv = btn.querySelector("canvas"); if(!cv) return; const g = cv.getContext("2d");
+  g.setTransform(1,0,0,1,0,0);
+  const grd = g.createLinearGradient(0, 0, 0, cv.height); grd.addColorStop(0, "#3A3F4B"); grd.addColorStop(1, "#16181D");
+  g.fillStyle = grd; g.fillRect(0, 0, cv.width, cv.height);
+  const cs = captionStateFor(n, preset); if(!cs) return;
+  const F = frameOf(n), o = {W:F.W, H:F.H, t, groups: cs.groups, values: cs.values, motion:"smooth"};
+  let lay = null; try{ lay = CAP.layout(g, o); }catch(e){}
+  if(!lay || !lay.div) return;
+  const d = lay.div;
+  // one scale per tile (set by its first caption), shrunk only if a longer caption wouldn't fit
+  if(!btn._capScale) btn._capScale = Math.min(cv.width * 0.86 / d.w, cv.height * 0.7 / d.h, cv.width / 520);
+  const sc = Math.min(btn._capScale, cv.width * 0.94 / d.w, cv.height * 0.88 / d.h);
+  g.setTransform(sc, 0, 0, sc, cv.width / 2 - (d.x + d.w / 2) * sc, cv.height / 2 - (d.y + d.h / 2) * sc);
+  g.save(); try{ CAP.draw(g, o); }catch(e){} g.restore();
+  g.setTransform(1,0,0,1,0,0);
+}
+function animateTile(btn, n, preset){
+  const token = {}; capHover = token; const t0 = performance.now(), start = captionPosterTime(n) - 0.6;
+  const step = now => { if(capHover !== token || !capModal) return; drawTile(btn, n, preset, start + ((now - t0)/1000) % 6); requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}
+function closeCaptions(){ if(!capModal) return; capHover = null; capModal.remove(); capModal = null; unlockScroll(); if(capCard) capCard.querySelector(".cap-btn").focus({ preventScroll: true }); capCard = null; }
+async function pickCaption(card, preset){
+  const c = clips.find(x=>x.id===card.dataset.id); if(!c) return;
+  if(preset){ c.captionStyle = { preset, overrides: capOverrides(c) }; await loadCaptionFonts(); } else delete c.captionStyle;
+  capModal && capModal.querySelectorAll(".cap-tile").forEach(b => b.setAttribute("aria-pressed", "false"));
+  closeCaptions();
+  drawMotion(card, current===card ? audio.currentTime : posterTime(c.n));
+  card.querySelector(".motion-note").textContent = (MD.clips[c.n]||{}).style + (preset ? " · captions: " + (CAP.templates.find(t=>t.id===preset)||{}).label : "") + " · tap to play";
+  syncCaptionPos(card, c);
+  try{ await db.collection("clips").doc(c.id).update({ captionStyle: c.captionStyle || null }); }
+  catch(e){ card.querySelector(".render-status").textContent = "Couldn't save the caption choice. Try again."; }
+}
+document.addEventListener("keydown", e => { if(capModal && e.key === "Escape") closeCaptions(); });
+// ---- full screen preview ----
+let theaterCard = null;
+function theaterUI(){
+  if(!theaterCard) return;
+  const playing = current===theaterCard && !audio.paused;
+  $("#th-play").innerHTML = playing ? ICON_PAUSE : ICON_PLAY;
+  const dur = current===theaterCard && audio.duration ? audio.duration : +theaterCard.dataset.dur;
+  const pos = current===theaterCard ? audio.currentTime : 0;
+  $("#th-bar i").style.width = (dur ? pos/dur*100 : 0) + "%";
+  $("#th-time").textContent = fmt(pos) + " / " + fmt(dur);
+}
+function openTheater(card){
+  theaterCard = card; const th = $("#theater"); lockScroll(); th.hidden = false;
+  const t = current===card ? audio.currentTime : posterTime(+card.dataset.n);
+  fontsReady.then(()=>drawMotion(card, t)); theaterUI();
+  if(th.requestFullscreen) th.requestFullscreen().catch(()=>{});
+  $("#th-close").focus({ preventScroll: true });
+}
+function closeTheater(){
+  if(!theaterCard) return;
+  theaterCard = null; $("#theater").hidden = true; unlockScroll();
+  if(document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(()=>{});
+}
+$("#th-close").onclick = closeTheater;
+$("#th-play").onclick = () => { if(theaterCard) theaterCard.querySelector(".play").click(); };
+$("#th-canvas").onclick = () => { const cv = $("#th-canvas"); if(cv._dragged){ cv._dragged = false; return; } if(theaterCard) theaterCard.querySelector(".play").click(); };
+attachCaptionDrag($("#th-canvas"), () => theaterCard);
+$("#th-bar").onclick = e => { if(!theaterCard) return; if(current!==theaterCard){ theaterCard.querySelector(".play").click(); return; } if(!audio.duration) return; const r = $("#th-bar").getBoundingClientRect(); audio.currentTime = (e.clientX-r.left)/r.width*audio.duration; };
+document.addEventListener("keydown", e => { if(!theaterCard) return; if(e.key==="Escape") closeTheater(); if(e.key===" "){ e.preventDefault(); theaterCard.querySelector(".play").click(); } });
+document.addEventListener("fullscreenchange", () => { if(!document.fullscreenElement && theaterCard) closeTheater(); });
+["play","pause","timeupdate","ended","seeked"].forEach(ev => audio.addEventListener(ev, theaterUI));
+function motionLoop(){ if(!current || audio.paused) return; drawMotion(current, audio.currentTime); requestAnimationFrame(motionLoop); }
+function posterTime(n){ const d = MD && MD.clips[n]; if(!d) return 1; const b = d.beats.find(b=>b.kind==="key"||b.kind==="hook") || d.beats[0]; const nx = d.beats[d.beats.indexOf(b)+1]; return Math.min((nx?nx.t:d.dur)-0.5, b.t+1.6); }
+const posterIO = "IntersectionObserver" in window ? new IntersectionObserver(es=>{ es.forEach(e=>{ if(e.isIntersecting){ const card=e.target.closest(".clip"); if(card && card!==current) fontsReady.then(()=>drawMotion(card, posterTime(+card.dataset.n))); } }); }, {rootMargin:"200px"}) : null;
+audio.addEventListener("pause", ()=> current && (current.querySelector(".play").innerHTML = ICON_PLAY));
+audio.addEventListener("timeupdate", ()=>{ if(!current||!audio.duration) return; current.querySelector(".bar i").style.width = (audio.currentTime/audio.duration*100)+"%"; current.querySelector(".time").textContent = fmt(audio.currentTime)+" / "+fmt(audio.duration); });
+audio.addEventListener("ended", ()=> current && resetPlayer(current));
+
+async function save(id, patch, flagEl){
+  if(!db) return;
+  try{ await db.collection("clips").doc(id).update(patch); if(flagEl){ flagEl.textContent = "Saved"; setTimeout(()=>flagEl.textContent="",1500); } }
+  catch(e){ if(flagEl) flagEl.textContent = "Couldn't save. Try again."; }
+}
+
+function render(){
+  const box = $("#clips");
+  $("#empty").hidden = clips.length > 0;
+  const sel = meta.speakersSelected || []; const inVoice = c => !sel.length || sel.includes(c.speaker);
+  const keep = clips.filter(c=>!c.deleted && inVoice(c)), del = clips.filter(c=>c.deleted).length, noted = clips.filter(c=>(c.notes||"").trim()).length;
+  const secs = keep.reduce((a,c)=>a+(c.end-c.start),0);
+  if(stage()==="voices"){ const n=(meta.speakersSelected||[]).length; $("#summary").innerHTML = `<span><b>${Object.keys(meta.speakers||{}).length}</b> voices found</span><span><b>${n}</b> selected</span>`; return; }
+  $("#summary").innerHTML = clips.length ? `<span><b>${keep.length}</b> kept</span><span><b>${del}</b> deleted</span><span><b>${noted}</b> with notes</span><span><b>${fmt(secs)}</b> total voiceover</span>` : "<span>No clips yet</span>";
+  clips.forEach(c=>{
+    let card = box.querySelector(`[data-id="${c.id}"]`);
+    if(!card){ card = build(c); box.appendChild(card); }
+    sync(card, c);
+  });
+  [...box.querySelectorAll(".clip")].forEach(el=>{ if(!clips.find(c=>c.id===el.dataset.id)) el.remove(); });
+  const order = [...box.querySelectorAll(".clip")].map(el => el.dataset.id).join(",");
+  if(order !== clips.map(c => c.id).join(",")) clips.forEach(c=> box.appendChild(box.querySelector(`[data-id="${c.id}"]`)));
+}
+
+function build(c){
+  const el = document.createElement("article");
+  el.className = "clip"; el.dataset.id = c.id; el.dataset.dur = c.end - c.start; el.dataset.n = c.n;
+  el.innerHTML = `
+    <div class="num"></div>
+    <div class="body">
+      <div class="topline"><div><h3></h3><div class="tc"><span class="in"></span> → <span class="out"></span> · <span class="len"></span> · <span class="spk"></span></div></div>
+        <button class="del" type="button"></button></div>
+      <p class="voice-note" hidden>Voice not selected. This clip will be dropped.</p>
+      <p class="restore-note" hidden>Deleted. This clip won't be made into a video.</p>
+      <p class="idea"></p>
+      <div class="motion" hidden><div><div class="motion-wrap"><canvas class="stage-canvas" width="1080" height="1920" aria-label="Motion preview"></canvas><button class="fs-btn" type="button" aria-label="Full screen" title="Full screen"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button></div><p class="motion-note"></p><div class="cap-pos" hidden role="group" aria-label="Caption position"><span class="cap-pos-label">Caption position</span><button class="chip" type="button" data-pos="top">Top</button><button class="chip" type="button" data-pos="middle">Middle</button><button class="chip" type="button" data-pos="raised">Raised</button><button class="chip" type="button" data-pos="bottom">Bottom</button><button class="cap-reset" type="button">Reset</button><span class="cap-pos-hint">Or drag the caption on the preview.</span></div><div class="render-row"><button class="render-btn cap-btn" type="button">Captions</button><button class="render-btn" type="button">Render MP4</button><span class="render-status"></span></div></div></div>
+      <div class="player"><button class="play" type="button" aria-label="Play clip">${ICON_PLAY}</button><div class="bar"><i></i></div><span class="time"></span></div>
+      <details><summary>Transcript (machine-translated from Urdu)</summary><p class="tx"></p></details>
+      <div class="controls">
+        <label class="field" for="style-${c.id}"><span>Style</span><select id="style-${c.id}">${Object.entries(STYLE_GROUPS).map(([g,list])=>`<optgroup label="${g}">${list.map(s=>`<option>${s}</option>`).join("")}</optgroup>`).join("")}</select></label>
+        <label class="field" for="format-${c.id}"><span>Format</span><select id="format-${c.id}">${FORMATS.map(([v,l])=>`<option value="${v}">${l}</option>`).join("")}</select></label>
+      </div>
+      <label class="field" for="notes-${c.id}"><span>Notes for this clip</span><textarea id="notes-${c.id}" placeholder="e.g. Start one sentence later, or cut the last line"></textarea></label>
+      <div class="saved"></div>
+    </div>`;
+  const flag = el.querySelector(".saved");
+  el.querySelector(".del").onclick = () => { const c2 = clips.find(x=>x.id===c.id); c2.deleted = !c2.deleted; if(c2.deleted && current===el) audio.pause(); render(); save(c.id,{deleted:c2.deleted}); };
+  el.querySelector(`#style-${c.id}`).onchange = e => save(c.id,{style:e.target.value},flag);
+  el.querySelector(`#format-${c.id}`).onchange = e => save(c.id,{format:e.target.value},flag);
+  const ta = el.querySelector(`#notes-${c.id}`); let t;
+  ta.oninput = () => { clearTimeout(t); t = setTimeout(()=>save(c.id,{notes:ta.value},flag), 900); };
+  ta.onblur = () => { clearTimeout(t); const c2=clips.find(x=>x.id===c.id); if((c2.notes||"")!==ta.value) save(c.id,{notes:ta.value},flag); };
+  playerFor(el, c.audio ? "/_blob/"+c.audio : null);
+  resetPlayer(el);
+  el.querySelector(".cap-btn").onclick = () => openCaptions(el);
+  el.querySelectorAll(".cap-pos .chip").forEach(b => b.onclick = () => setCaptionPosition(el, b.dataset.pos));
+  el.querySelector(".cap-reset").onclick = () => setCaptionPosition(el, null);
+  attachCaptionDrag(el.querySelector(".stage-canvas"), () => el);
+  el.querySelector(".render-btn:not(.cap-btn)").onclick = () => {
+    const c2 = clips.find(x=>x.id===c.id), d = MD && MD.clips[c2.n];
+    sendToClaude(`Render MP4: clip #${c2.n} (${d ? d.style : c2.style}, ${c2.format||"9:16"}${c2.captionStyle ? ", captions: "+c2.captionStyle.preset : ""}).`, "Sent. Claude is rendering this video.", "renderRequestedAt", el.querySelector(".render-btn:not(.cap-btn)"), el.querySelector(".render-status"), "clips/"+c.id);
+  };
+  return el;
+}
+
+function sync(el, c){
+  if((el.dataset.audio||"") !== (c.audio||"")){ if(current===el){ audio.pause(); current=null; } el.dataset.audio = c.audio||""; el.dataset.dur = c.end - c.start; playerFor(el, c.audio ? "/_blob/"+c.audio : null); resetPlayer(el); }
+  el.classList.toggle("deleted", !!c.deleted);
+  { const mv = el.querySelector(".motion"), d = MD && MD.clips[c.n]; const on = stage()==="motion";
+    if(!on) syncCaptionPos(el, null);
+    mv.hidden = !on; if(on){ const ok = d && d.ready && MS[d.styleFile]; el.querySelector(".motion-note").textContent = ok ? (d.style + (c.captionStyle && CAP ? " · captions: " + ((CAP.templates.find(t=>t.id===c.captionStyle.preset)||{}).label||c.captionStyle.preset) : "") + " · tap to play") : "Motion preview being built…";
+      el.querySelector(".cap-btn").hidden = !ok || !CAP;
+      syncCaptionPos(el, ok ? c : null);
+      if(ok && c.captionStyle && CAP && !el.dataset.capFonts){ el.dataset.capFonts = "1"; loadCaptionFonts().then(() => { if(el !== current) drawMotion(el, posterTime(c.n)); }); }
+      if(ok && !el.dataset.watched && posterIO){ posterIO.observe(mv); el.dataset.watched="1"; } } }
+  { const rs = el.querySelector(".render-status"); if(!el.querySelector(".render-btn:not(.cap-btn)").disabled && rs.textContent!=="Sending…") rs.textContent = c.renderedAt ? "MP4 rendered" : (c.renderRequestedAt ? "Render requested" : ""); }
+  const sel = meta.speakersSelected || []; const off = sel.length && !sel.includes(c.speaker);
+  el.classList.toggle("offvoice", !!off && !c.deleted); el.querySelector(".voice-note").hidden = !off || !!c.deleted;
+  el.querySelector(".num").firstChild ? el.querySelector(".num").firstChild.nodeValue = String(c.n).padStart(2,"0") : el.querySelector(".num").prepend(document.createTextNode(String(c.n).padStart(2,"0")));
+  el.querySelector("h3").textContent = c.title;
+  el.querySelector(".in").textContent = fmt(c.start);
+  el.querySelector(".out").textContent = fmt(c.end);
+  el.querySelector(".len").textContent = Math.round(c.end-c.start)+"s";
+  el.querySelector(".spk").textContent = c.speakerLabel || "";
+  el.querySelector(".idea").textContent = c.idea;
+  el.querySelector(".tx").textContent = c.transcript;
+  el.querySelector(".restore-note").hidden = !c.deleted;
+  const d = el.querySelector(".del"); d.textContent = c.deleted ? "Restore" : "Delete";
+  d.setAttribute("aria-label", (c.deleted?"Restore":"Delete")+" clip "+c.n);
+  const st = el.querySelector("select[id^=style]"); if(document.activeElement!==st && c.style) st.value = c.style;
+  const fm = el.querySelector("select[id^=format]"); if(document.activeElement!==fm && c.format) fm.value = c.format;
+  const ta = el.querySelector("textarea"); if(document.activeElement!==ta) ta.value = c.notes || "";
+}
+
+const stage = () => meta.stage || "clips";
+function applyStage(){
+  const v = stage()==="voices";
+  $("#clips").hidden = v; $("#overall-section").hidden = v;
+  const mo = stage()==="motion";
+  $("#renderall").hidden = !mo;
+  $("#send").textContent = v ? "Confirm voices" : (mo ? "Send feedback to Claude" : "Send review to Claude");
+  if(!$("#send").dataset.busy) $("#send-status").textContent = v ? "Tick the voices to keep, then confirm. Claude picks clips after that." : (mo ? "Play each motion preview, add notes, then send feedback." : "Review the clips, then send your decisions to Claude.");
+}
+function renderSpeakers(){
+  const s = meta.speakers || {}; const keys = Object.keys(s).sort();
+  const show = keys.length >= 2 && stage()==="voices";
+  $("#speakers").hidden = !show;
+  if(!show) return;
+  const sel = new Set(meta.speakersSelected || []);
+  const list = $("#spk-list"); list.innerHTML = "";
+  keys.forEach(k=>{
+    const row = document.createElement("div"); row.className = "spk-row";
+    row.innerHTML = `<label for="spk-${k}"><input type="checkbox" id="spk-${k}" value="${k}"> <span></span></label><span class="muted mono" style="font-size:.8rem"></span><audio controls preload="none"></audio>`;
+    row.querySelector("label span").textContent = s[k].label || k;
+    row.querySelector(".mono").textContent = s[k].minutes ? s[k].minutes+" min of speech" : "";
+    if(s[k].sample) row.querySelector("audio").src = "/_blob/"+s[k].sample; else row.querySelector("audio").remove();
+    const box = row.querySelector("input"); box.checked = sel.has(k);
+    box.onchange = async ()=>{
+      const now = [...list.querySelectorAll("input:checked")].map(i=>i.value);
+      meta.speakersSelected = now; render();
+      try{ await db.doc("board/meta").update({speakersSelected:now}); }catch(e){ $("#send-status").textContent = "Couldn't save that choice. Try again."; }
+    };
+    list.appendChild(row);
+  });
+}
+
+async function boot(){
+  const timer = setTimeout(()=>{ if(!clips.length) $("#summary").innerHTML = "<span>Still waiting for the clip list. Reload in a moment.</span>"; }, 10000);
+  db = await (window.claude?.use ? claude.use("db") : null);
+  if(!db){ clearTimeout(timer); $("#summary").innerHTML = "<span>Open this board in claude.ai to load the clips.</span>"; $("#send").disabled = true; return; }
+  db.collection("clips").orderBy("n").onSnapshot(snap=>{ clearTimeout(timer); clips = snap.docs.map(d=>({id:d.id,...d.data()})); keepScroll(render); },
+    ()=>{ clearTimeout(timer); $("#summary").innerHTML = "<span>Couldn't load the clips. Reload the page.</span>"; });
+  watchIntake();
+  let firstMeta = true;
+  db.doc("board/meta").onSnapshot(snap=>{
+    if(!snap.exists){ if(firstMeta){ firstMeta=false; showTab("setup"); } return; } meta = snap.data();
+    if(firstMeta){ firstMeta = false; const h = (location.hash||"").slice(1); showTab(h==="setup"||h==="review" ? h : (stage()==="setup" ? "setup" : "review")); }
+    if(meta.title) $("#ep-title").textContent = meta.title;
+    if(meta.source) $("#source").textContent = meta.source;
+    const ov = $("#overall"); if(document.activeElement!==ov) ov.value = meta.overall || "";
+    keepScroll(() => { applyStage(); renderSpeakers(); render(); });
+  });
+  let t; const ov = $("#overall");
+  const saveOverall = async ()=>{ try{ await db.doc("board/meta").update({overall:ov.value}); $("#overall-saved").textContent="Saved"; setTimeout(()=>$("#overall-saved").textContent="",1500);}catch(e){ $("#overall-saved").textContent="Couldn't save. Try again."; } };
+  ov.oninput = ()=>{ clearTimeout(t); t=setTimeout(saveOverall,900); };
+  ov.onblur = ()=>{ clearTimeout(t); if((meta.overall||"")!==ov.value) saveOverall(); };
+}
+
+async function sendToClaude(text, okMsg, markField, btn = $("#send"), st = $("#send-status"), markDoc = "board/meta"){
+  const fallback = "Your choices are saved. Type \"done\" in the chat with Claude.";
+  const comments = await (window.claude?.use ? claude.use("comments") : null);
+  let ok = "off"; if(comments){ try{ ok = await comments.canSendToClaude(); }catch(e){} }
+  try{ await db.doc(markDoc).update({[markField]:new Date().toISOString()}); }catch(e){}
+  if(ok !== "available"){ st.textContent = "Saved. Paste the prompt below into the chat with Claude."; showHandoff(st.closest(".render-row, .in, .inline, .renderall") || st.parentElement, text); return; }
+  btn.disabled = true; btn.dataset.busy = "1"; st.textContent = "Sending…";
+  try{ const anchor = await comments.anchorFor(btn); await comments.sendToClaude({anchor, text}); st.textContent = okMsg; }
+  catch(e){ if(e && e.code==="rate_limited"){ st.textContent = "Sent too recently. Wait a moment and try again."; } else { st.textContent = "Saved. Paste the prompt below into the chat with Claude."; showHandoff(st.closest(".render-row, .in, .inline, .renderall") || st.parentElement, text); } }
+  finally{ btn.disabled = false; delete btn.dataset.busy; }
+}
+const labelOf = k => ((meta.speakers||{})[k]||{}).label || k;
+$("#render-all").onclick = () => {
+  const keep = clips.filter(c=>!c.deleted).map(c=>"#"+c.n);
+  sendToClaude(`Render all MP4s: ${keep.length} clip(s): ${keep.join(", ")}.`, "Sent. Claude is rendering all videos.", "renderAllRequestedAt", $("#render-all"), $("#render-all-status"));
+};
+$("#send").onclick = async ()=>{
+  document.activeElement && document.activeElement.blur();
+  if(stage()==="voices"){
+    const sel = meta.speakersSelected || [];
+    if(!sel.length){ $("#send-status").textContent = "Tick at least one voice first."; return; }
+    return sendToClaude(`Voices confirmed: ${sel.map(labelOf).join(", ")}. Pick clips from these voices only.`, "Sent. Claude is picking clips from these voices.", "voicesConfirmedAt");
+  }
+  const sel = meta.speakersSelected || [];
+  const keep = clips.filter(c=>!c.deleted && (!sel.length || sel.includes(c.speaker))), del = clips.filter(c=>c.deleted);
+  const noted = clips.filter(c=>(c.notes||"").trim() && !c.deleted);
+  let text = `${stage()==="motion"?"Motion feedback":"Review done"}. Keep ${keep.length} clip(s): ${keep.map(c=>"#"+c.n).join(", ")||"none"}. Delete ${del.length}: ${del.map(c=>"#"+c.n).join(", ")||"none"}.`;
+  if(noted.length) text += ` Notes on ${noted.map(c=>"#"+c.n).join(", ")}.`;
+  if((meta.overall||$("#overall").value||"").trim()) text += " Overall notes added.";
+  text += " Full decisions are saved on the board.";
+  return sendToClaude(text, "Sent. Claude is working on your changes.", "submittedAt");
+};
+// ---- handoff card: what Claude will do + the exact prompt to paste, when the page can't message Claude ----
+function showHandoff(anchorEl, prompt){
+  let card = anchorEl.nextElementSibling && anchorEl.nextElementSibling.classList.contains("handoff") ? anchorEl.nextElementSibling : null;
+  if(!card){ card = document.createElement("div"); card.className = "handoff"; anchorEl.after(card); }
+  card.innerHTML = `<p>Your choices are saved. Paste this into the chat with Claude to continue:</p><code></code><button type="button">Copy prompt</button>`;
+  card.querySelector("code").textContent = prompt;
+  card.querySelector("button").onclick = async e => {
+    try{ await navigator.clipboard.writeText(prompt); e.target.textContent = "Copied"; }
+    catch(err){ const r = document.createRange(); r.selectNodeContents(card.querySelector("code")); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); e.target.textContent = "Selected: press Ctrl/Cmd+C"; }
+  };
+}
+
+// ---- tabs ----
+function showTab(name){
+  const setup = name === "setup";
+  $("#tab-setup").hidden = !setup; $("#tab-review").hidden = setup;
+  $("#tab-btn-setup").setAttribute("aria-selected", setup); $("#tab-btn-review").setAttribute("aria-selected", !setup);
+  document.querySelector(".sendbar").hidden = setup;
+  try{ if(location.hash !== "#"+name) history.replaceState(null, "", "#"+name); }catch(e){}
+}
+document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => showTab(b.dataset.tab));
+
+// ---- setup form (intake/current) ----
+let intake = {}, intakeLoaded = false;
+const STYLE_LIST = Object.entries(STYLE_GROUPS);
+(function buildChips(){
+  const box = $("#style-chips");
+  STYLE_LIST.forEach(([g, list]) => {
+    const h = document.createElement("div"); h.className = "chip-group"; h.textContent = g; box.appendChild(h);
+    list.forEach(name => { const c = document.createElement("button"); c.type = "button"; c.className = "chip"; c.textContent = name; c.setAttribute("aria-pressed","false");
+      c.onclick = () => { const mode = radio("stylemode"); const on = c.getAttribute("aria-pressed") !== "true";
+        if(mode === "same") box.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed","false"));
+        c.setAttribute("aria-pressed", on); saveIntakeSoon(); };
+      box.appendChild(c); });
+  });
+})();
+const radio = name => (document.querySelector(`input[name="${name}"]:checked`)||{}).value || "";
+const setRadio = (name, v) => { const el = document.querySelector(`input[name="${name}"][value="${v}"]`); if(el) el.checked = true; };
+function readForm(){
+  return { source: $("#in-source").value.trim(), brief: $("#in-brief").value,
+    countMode: radio("count") || "auto", count: +$("#in-count").value || null,
+    styleMode: radio("stylemode") || "auto",
+    styles: [...document.querySelectorAll("#style-chips .chip[aria-pressed=true]")].map(c=>c.textContent),
+    styleCustom: $("#in-style-custom").value.trim(),
+    format: radio("format") || "9:16", textLang: radio("textlang") || "", captions: radio("captions") || "on", captionWording: radio("capwording") || "refined",
+    destination: radio("dest") || "chat", driveFolder: $("#in-folder").value.trim(), notes: $("#in-notes").value };
+}
+function fillForm(d){
+  const act = document.activeElement;
+  if(act !== $("#in-source")) $("#in-source").value = d.source || "";
+  if(act !== $("#in-brief")) $("#in-brief").value = d.brief || "";
+  setRadio("count", d.countMode || "auto"); if(act !== $("#in-count") && d.count) $("#in-count").value = d.count;
+  setRadio("stylemode", d.styleMode || "auto");
+  document.querySelectorAll("#style-chips .chip").forEach(c => c.setAttribute("aria-pressed", (d.styles||[]).includes(c.textContent)));
+  if(act !== $("#in-style-custom")) $("#in-style-custom").value = d.styleCustom || "";
+  setRadio("format", d.format || "9:16"); if(d.textLang) setRadio("textlang", d.textLang); setRadio("captions", d.captions || "on"); setRadio("capwording", d.captionWording || "refined");
+  setRadio("dest", d.destination || "chat"); if(act !== $("#in-folder")) $("#in-folder").value = d.driveFolder || "";
+  if(act !== $("#in-notes")) $("#in-notes").value = d.notes || "";
+  if(d.detectedLanguage){ const h = $("#lang-help"); if(!h.dataset.base) h.dataset.base = h.innerHTML; h.innerHTML = `Detected: <b></b>. ` + h.dataset.base; h.querySelector("b").textContent = d.detectedLanguage; }
+  syncSetupUI();
+}
+function syncSetupUI(){
+  const m = radio("stylemode"); $("#style-pick").hidden = m === "auto" || m === "";
+  $("#style-pick-help").textContent = m === "same" ? "Pick one style, or describe your own." : "Pick any styles you like; Claude matches each clip to the best fit. You can also set styles per clip later.";
+  $("#folder-field").hidden = !["drive","both"].includes(radio("dest"));
+  $("#in-capwording").hidden = radio("captions") === "off";
+}
+let intakeTimer;
+async function saveIntake(){
+  if(!db) return;
+  const d = { ...intake, ...readForm(), at: new Date().toISOString() };
+  try{ await db.doc("intake/current").set(d); intake = d; $("#setup-saved").textContent = "Saved"; setTimeout(()=>$("#setup-saved").textContent="",1200); }
+  catch(e){ $("#setup-saved").textContent = "Couldn't save. Try again."; }
+}
+function saveIntakeSoon(){ syncSetupUI(); clearTimeout(intakeTimer); intakeTimer = setTimeout(saveIntake, 700); }
+document.querySelectorAll("#tab-setup input, #tab-setup textarea").forEach(el => { el.addEventListener("input", saveIntakeSoon); el.addEventListener("change", saveIntakeSoon); });
+$("#start").onclick = async () => {
+  const d = readForm();
+  if(!d.source){ $("#start-status").textContent = "Add the video or audio link first, or attach the file in the chat and say so in Notes."; }
+  clearTimeout(intakeTimer); await saveIntake();
+  const parts = [`Start making motion clips from ${d.source || "the video or audio file I attached in the chat"}.`, "Everything is saved in the Setup tab of my board"];
+  parts.push(`${d.countMode==="fixed" ? "about "+d.count+" clips" : "as many clips as are meaningful"}, ${d.format}.`);
+  sendToClaude(parts.join(" ").replace("board ","board: "), "Sent. Claude is starting.", "startRequestedAt", $("#start"), $("#start-status"), "intake/current");
+};
+function watchIntake(){
+  db.doc("intake/current").onSnapshot(snap => { intake = snap.exists ? snap.data() : {}; if(!intakeLoaded || !$("#tab-setup").contains(document.activeElement)) fillForm(intake); intakeLoaded = true; });
+}
+
+boot();
+</script>
